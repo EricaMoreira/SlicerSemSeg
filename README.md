@@ -56,7 +56,7 @@ Downloading and installing 3D Slicer will *not* overwrite or affect any of your 
 
 #### Step 2 
 
-Open 3D Slicer, and display the Python Interactor by clicking the button at the top right:
+Open 3D Slicer (from inside your Applications folder), and display the Python Interactor by clicking the button at the top right:
 
 ![Picture5](https://user-images.githubusercontent.com/43005886/63350938-9a9f8b00-c35e-11e9-9602-1b19f3017fc3.png)
 
