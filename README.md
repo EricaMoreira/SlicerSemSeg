@@ -68,7 +68,9 @@ Download/clone the `project_folder` located [here](https://github.com/EricaMorei
 
 #### Step 4 
 
-It is very important to set up your file structure in the right way in order for the scripts to run correctly. Go to the `project_folder` you just downloaded. The files in the `project_folder` are necessary for the scripts to run, so don’t change the names or delete any files! You can change the name `project_folder` to something else, but **make sure that is reflected in step 7 below**. All you need to do is go to the `data` folder and add the images you would like to analyze. In the `original` folder, add your original images. In the `reference` folder, add any image labels that you happen to have. The reference images are used by the model to compute the accuracy during the optional model testing/validation mentioned in step 15. (if you don’t have any previously labeled images, that is ok, just leave this folder empty). 
+It is very important to set up your file structure in the right way in order for the scripts to run correctly. Go to the `project_folder` you just downloaded. The files in the `project_folder` are necessary for the scripts to run, so don’t change the names or delete any files! You can change the name `project_folder` to something else, but **make sure that is reflected in step 7 below**. 
+
+All you need to do is go to the `data` folder and add the images you would like to analyze. In the `original` folder, **add your original images**. In the `reference` folder, add any image labels that you happen to have. The reference images are used by the model to compute the accuracy during the optional model testing/validation mentioned in step 15. (if you don’t have any previously labeled images to put in the `reference` folder, that is ok, just leave this folder empty). You cannot leave the `original` folder empty, however, otherwise the system will not know what images you are trying to analyze!
 
 ![Picture6](https://user-images.githubusercontent.com/43005886/63351004-bd31a400-c35e-11e9-928c-3e8d50acac9a.png)
 
