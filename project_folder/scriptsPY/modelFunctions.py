@@ -204,60 +204,6 @@ def lossfunc(pred, labels, img, wtperclass, ignore_index=-100):
 
     return output
     
-###############################################################################
-#######    save_example_results
-###############################################################################
-
-def save_example_results(model, X_valid, y_valid, cuda_available):
-    # resultpath = '/home/achanta/pytorching/unet/unet_microia/results/'
-    resultpath = '/users/achanta/rktemp/'
-
-
-    ind = np.random.randint(0,X_valid.shape[0],(1,1)).squeeze()
-
-    count = 0
-    for fimage, fmask in zip(X_valid, y_valid):
-        if True:#count == ind: #0 == count%10:
-     
-            img = imread(fimage).astype(np.float32)/255.0
-            mask =imread( fmask).astype(np.int64) - 1
-            img = img[2:458, 2:458] # change in dimension done to adjust to maxpool operations of unet
-            mask = mask[2:458, 2:458] # change in dimension done to adjust to maxpool operations of unet
-            h = img.shape[0]
-            w = img.shape[1]
-            inpimg =  torch.from_numpy(img.reshape((1,1,h,w)))
-
-            if cuda_available:
-                inpimg = inpimg.cuda()
-            labels,decimg = model(inpimg)
-            if cuda_available:
-                labels = np.uint8(np.argmax(labels.cpu().detach().numpy(), 1))
-                decimg = np.uint8(decimg.cpu().detach().numpy())
-            else:
-                labels = np.uint8(np.argmax(labels.detach(), 1))
-                decimg = np.uint8(decimg.detach())
-
-            img = np.uint8(img*255.0)
-            mask = np.uint8(mask)
-            
-            comb_img = np.dstack([img]*3)
-            comb_mask1 = np.dstack([mask.squeeze()]*3)*80
-            comb_mask2 = np.dstack([labels.squeeze()]*3)*80
-            #comb_mask3 = np.dstack([out, mask, mask])
-            dec_image = np.dstack([decimg.squeeze()]*3)
-            
-            # big = np.hstack([comb_img.copy(), comb_mask1.copy(), comb_mask2.copy(), dec_image.copy()])
-            big = np.hstack([comb_img, comb_mask1, comb_mask2, dec_image])
-            savepath = resultpath+fimage.split('/')[-1].split('.')[0] + ".png"
-            imwrite(savepath,big)
-            
-
-        count += 1
-        if(count >= 3):
-            break
-        
-    print("results saved") 
-    
     
 ###############################################################################
 #######    FromImageFilenames
