@@ -14,7 +14,7 @@ First, let’s consider why you would want to label every pixel of a 2D image of
 
 Now we know *why* we want to do semantic image segmentation on these heart images, but how do we actually go about doing it? One way would be to have a person zoom into the image and literally type a label in a matrix (think a 460x460 cell excel sheet) for every pixel. They would look at the pixel in the first row and column of the image, and if that pixel was background, they would type a 2 in the first row and column of the matrix, and then they would move on to the next pixel. This is obviously absurd and would make for a very tedious process. Another way would be for a person to use some kind of paint software to “paint” labels on to an image. They would paint all of the collagen one color, the cells another color, and the background a third color, and then those colors could be easily transformed into a matrix the same size as the original image with values 0, 1, and 2 in it. This process, though very slow and expensive (especially when you consider paying a person to label hundreds or thousands of images), *could* have been the process used to create the semantically segmented image and semantic labels shown above.
 
-In more recent years, however, people have found ways to make this process even easier and faster by using various types of convolutional neural networks to predict the labels. There are many techniques that are being used to do this, and there are quite a few tools available that do one or more of these techniques inside a nice user interface. Our goal was to find or create a user-friendly solution that integrated some manual labeling by a user with a model we had written to predict the rest of the labels for a set of images. Before deciding to create our own solution, we researched and extensively tested the currently available options. We looked at [Supervisely](https://supervise.ly),
+In more recent years, however, people have found ways to make this process even easier and faster by using various types of convolutional neural networks to predict the labels. There are many techniques that are being used to do this, and there are quite a few tools available that do one or more of these techniques inside a nice user interface. Our goal was to find or create a user-friendly solution that integrated some manual labeling by a user with a model we had written to predict the rest of the labels for a set of images. Before deciding to create our own solution, we researched and extensively tested the currently available options. We looked at
 [Supervisely](https://supervise.ly),
 [Labelbox](https://labelbox.com/),
 [RectLabel](https://rectlabel.com/),
@@ -56,7 +56,7 @@ Downloading and installing 3D Slicer will *not* overwrite or affect any of your 
 
 #### Step 2 
 
-Open 3D Slicer, and display the Python Interactor by clicking the button circled at the top right:
+Open 3D Slicer, and display the Python Interactor by clicking the button at the top right:
 
 ![Picture5](https://user-images.githubusercontent.com/43005886/63350938-9a9f8b00-c35e-11e9-9602-1b19f3017fc3.png)
 
