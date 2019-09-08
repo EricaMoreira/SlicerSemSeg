@@ -81,6 +81,7 @@ We anticipate that you will use this solution for multiple images. However, if y
 In the Python Interactor, type the following:
 ```
 pip_install("scipy")
+pip_install("matplotlib")
 pip_install("tifffile")
 pip_install("pynrrd")
 pip_install("image")
