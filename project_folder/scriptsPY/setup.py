@@ -168,7 +168,7 @@ z_filenames = np.array(sorted(glob(truth_path)))
 epochs=100
 
 ## number of training images 
-numbertrainingimg = 1
+numbertrainingimg = 3
 
 ## number of validation images 
 numbervalidimg = 3
