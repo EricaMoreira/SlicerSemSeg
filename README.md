@@ -160,7 +160,7 @@ Also, here are some very handy hotkeys to keep in mind:
 
 #### Step 11
 
-Now that you are familiar with how to use 3D Slicer, you are ready to label your image. Select what you would like to label (collagen/background/cells) and begin to draw on your image using your mouse. Here are a few very important points to keep in mind:
+Now that you are familiar with how to use 3D Slicer, you are ready to label your image. Select what you would like to label (collagen/background/cells) and begin to draw on your image using your mouse/trackpad. Here are a few very important points to keep in mind:
 
 * You do not need to label (draw over with the paintbrush) every pixel in your image. In fact, **quality is more important than quantity!** Since we are doing this initial labeling to “teach” our algorithm how to predict the rest of the labels, we want to give it the best, most efficient examples to learn from.
 * To do that, try to label an equal surface area of the image with each of your labels. 
