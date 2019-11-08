@@ -253,7 +253,7 @@ exec(open(predictAllLabels).read())
 
 The labels will be saved into the `results` folder.
 
-**PLEASE NOTE:** The model that you have trained will be saved after time you run the model (step 14). This way, if you quit and start again the next day, for example, you will not lose the work you have done. 
+**PLEASE NOTE:** The model that you have trained will be saved after every time you run the model (step 14). This way, if you quit and start again the next day, for example, you will not lose the work you have done. 
 
 ## Authors
 
