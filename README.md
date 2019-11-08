@@ -132,7 +132,7 @@ numbervalidimg = 3    # number of random examples on which the model is tested
 seed = 2              # random seed
 ```
 
-The larger the `numbertrainingimg` is, the more images your model will learn from. If the model is trained on more images the outcome might be improved, but it will also take more time. `numbertrainingimg` should never be less than the number of images you provided. 
+The larger the `numbertrainingimg` is, the more images your model will learn from. If the model is trained on more images the outcome might be improved, but it will also take more time. `numbertrainingimg` should never be more than the number of images you provided. 
 
 If you don’t understand the advanced tip, *don’t worry!* You can safely ignore it and the model will just use the default settings. 
 
