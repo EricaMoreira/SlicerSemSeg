@@ -41,7 +41,7 @@ These instructions will help you set up and use our solution on your local machi
 * Images of a similar type (saved as .tiff files) that you would like to create segmentation maps for 
 * Entire `project_folder` downloaded/cloned from this repository
 
-## Set by Step Instructions: 
+## Step by Step Instructions: 
 
 ### Installation: 
 
